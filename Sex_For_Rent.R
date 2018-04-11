@@ -250,7 +250,7 @@ LocationTotals <-
   ActualFinalTable %>% group_by(location2) %>% tally(sort = TRUE) %>% data.frame() #creates data frame of location totals
 LocationTotals %>% mutate(percentage = (n / 67) * 100) #adds percentage column (67 is number of rows)
 
-#lets geocode that#
+#lets geocode that - This was useful: http://www.storybench.org/geocode-csv-addresses-r/
 
 LocationTotals$location2 <-
   paste(LocationTotals$location2, ", UK", sep = "") #adds ", UK" at the end of location column just incase cities have same name abroad
